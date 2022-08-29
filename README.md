@@ -13,3 +13,10 @@ This application also has features where the attendees can lookup the details of
 </ol>
 
 [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
+
+### Roles and responsibilities
+Rohith Chittipolu - Full stack
+Aishwarya Mallela - Frontend
+Satwika Reddy Guntipally - Database
+Aakanksha Reddy sunkireddy - UI/UX Design
+Abdul Khayyam s shaik - Backend
