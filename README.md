@@ -14,6 +14,9 @@ This application also has features where the attendees can lookup the details of
 
 [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
+### Satwika github link
+[githublink](https://github.com/Rohith-Chittipolu/Conference-scheduler/edit/main/README.md)
+
 ### Roles and responsibilities
 Rohith Chittipolu - Full stack
 Aishwarya Mallela - Frontend
