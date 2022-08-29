@@ -27,3 +27,6 @@ Abdul Khayyam s shaik - Backend
 **Technology Stack**
 Database: Google Firestack
 App design: Android Studio
+
+
+[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
