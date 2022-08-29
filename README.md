@@ -23,3 +23,7 @@ Aishwarya Mallela - Frontend
 Satwika Reddy Guntipally - Database
 Aakanksha Reddy sunkireddy - UI/UX Design
 Abdul Khayyam s shaik - Backend
+
+**Technology Stack**
+Database: Google Firestack
+App design: Android Studio
