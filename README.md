@@ -12,4 +12,4 @@ This application also has features where the attendees can lookup the details of
 <li>View Events</li>
 </ol>
 
-[Wiki](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
+[Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
