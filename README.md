@@ -12,6 +12,9 @@ This application also has features where the attendees can lookup the details of
 <li>View Events</li>
 </ol>
 
+### Client Info
+McAtee Brooke, Nursing Department
+
 [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
 ### Satwika github link
