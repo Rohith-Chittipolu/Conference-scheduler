@@ -4,6 +4,7 @@ The main purpose of this project is to create an application for scheduling a co
 ### Project description:
 Conference-Scheduler is an mobile application where one can schedule a conference or attend a existing conference.
 This application also has features where the attendees can lookup the details of their accomadations or book accomadations for the conference.
+
 **Features of the application:**
 <ol>
 <li>Sign Up</li>
