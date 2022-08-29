@@ -15,3 +15,8 @@ I’m Satwika Reddy Guntipally. I completed my bachelors from CVR College Of Eng
 ### Aakanksha Reddy
 This is Aakanksha Reddy Sunkireddy,pursuing masters in Computer Science.I am from INDIA and i finished my Bachelors in Computer Science at Vardhaman College of Engineering
 
+### Abdul Khayyam sahib Shaik
+This is Abdul Khayyam sahib Shaik, A computer science engineering graduate. Currently pursuing master’s in Northwest Missouri State University.
+Skills: Java, HTML, CSS, Javascript, Mysql, Mongo.
+
+
