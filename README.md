@@ -17,6 +17,9 @@ This application also has features where the attendees can lookup the details of
 ### Satwika github link
 [githublink](https://github.com/Rohith-Chittipolu/Conference-scheduler/edit/main/README.md)
 
+### Aakanksha's github link
+[Github link](https://github.com/AkankshaReddy12)
+
 ### Roles and responsibilities
 Rohith Chittipolu - Full stack
 Aishwarya Mallela - Frontend
@@ -27,6 +30,3 @@ Abdul Khayyam s shaik - Backend
 **Technology Stack**
 Database: Google Firestack
 App design: Android Studio
-
-
-[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
