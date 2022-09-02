@@ -37,7 +37,7 @@ App design: Android Studio
 *** Requirements ***
 To Create, schedule and manage your conference on this Conference Scheduling App to provide an interactive and personalized experience.
 Make a home page that includes a login, signup, logo, and flashcards of previous events.
-Before using this app, users must first sign up.
+Before using this app, users must first signup.
 First name, last name, middle name, email address, password, phone number, and a submit button should all be included on the sign-up page.
 The user should receive a verification code after submitting, then go to the login page.
 The login page will have fields like email id or user name, password and login button.
