@@ -1,0 +1,2 @@
+Registration page where the user can register to a particular conference by providing required details such as name, email, address, phone number,subject,
+and also the directions to the conference hall and having an option to share the conferance details to friends to register.

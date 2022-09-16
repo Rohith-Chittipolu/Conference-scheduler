@@ -1,0 +1,8 @@
+Conference Scheduler
+Overview: Homepage consists of page name with Conference-scheduler and it consists of drop down menu which 
+consists of account settings , enrolled events, Upcoming events, user logout buttons.
+coming down it displays the dyanamic flash cards undeer that it dispalys description about the displayed flashcard.
+
+Next page: when clicking on the flash card it directs to the detailed information about the event and consists of enroll button.
+
+
