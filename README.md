@@ -38,30 +38,32 @@ This application also has features where the attendees can lookup the details of
 </ol>
 
 ## Roles and responsibilities
-Rohith Chittipolu - Full stack
-Aishwarya Mallela - Frontend
-Satwika Reddy Guntipally - Database
-Aakanksha Reddy sunkireddy - UI/UX Design
-Abdul Khayyam s shaik - Backend
+* Rohith Chittipolu - Full stack
+* Aishwarya Mallela - Frontend
+* Satwika Reddy Guntipally - Database
+* Aakanksha Reddy sunkireddy - UI/UX Design
+* Abdul Khayyam s shaik - Backend
+* Ms Brooke - Client
+* Chandra Mouli Kotteti - Mentor
 
 ## Technology Stack
-Database: Google Firestack
-App design: Android Studio
+* Database: Google Firestack
+* App design: Android Studio
 
 ## Requirements
-To Create, schedule and manage your conference on this Conference Scheduling App to provide an interactive and personalized experience.
-Make a home page that includes a login, signup, logo, and flashcards of previous events.
-Before using this app, users must first signup.
-First name, last name, middle name, email address, password, phone number, and a submit button should all be included on the sign-up page.
-The user should receive a verification code after submitting, then go to the login page.
-The login page will have fields like email id or user name, password and login button.
-Now the user ought to be able to access the page for scheduling conferences.
+* To Create, schedule and manage your conference on this Conference Scheduling App to provide an interactive and personalized experience.
+* Make a home page that includes a login, signup, logo, and flashcards of previous events.
+* Before using this app, users must first signup.
+* First name, last name, middle name, email address, password, phone number, and a submit button should all be included on the sign-up page.
+* The user should receive a verification code after submitting, then go to the login page.
+* The login page will have fields like email id or user name, password and login button.
+* Now the user ought to be able to access the page for scheduling conferences.
 
 ## UserStory
-signup/login will be displayed as soon as the user opens the app.
-Once the user clicks on the signup button it will navigate to a page where users need to enter his details to create an account and click on next/submit button.
-Then the user will navigate to homepage, it will have fields list or card view, Event List contains (Name of the events ,location, Timings, Track button),Button to view Old Conferences, Button to view Future Events.
-When a user clicks on the Name of the event, The page will be directed to Event Details Page which contains information like Event details, Speaker details, Location, Timings, and a registration link.
+* signup/login will be displayed as soon as the user opens the app.
+* Once the user clicks on the signup button it will navigate to a page where users need to enter his details to create an account and click on next/submit button.
+* Then the user will navigate to homepage, it will have fields list or card view, Event List contains (Name of the events ,location, Timings, Track button),Button to view Old Conferences, Button to view Future Events.
+* When a user clicks on the Name of the event, The page will be directed to Event Details Page which contains information like Event details, Speaker details, Location, Timings, and a registration link.
 
 ## Client Info
 McAtee Brooke, Nursing Department
