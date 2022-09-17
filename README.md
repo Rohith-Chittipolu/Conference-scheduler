@@ -25,10 +25,9 @@
 * [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
 ## Project Objective:
-The main purpose of this project is to create an application for scheduling a conference and accommodation to the attendees where we have user pages and admin pages accordingly.
+The main purpose of this project is to create an application to view all the details and schedules of the events to the attendees where we have user pages and admin pages accordingly.
 ## Project description:
-Conference-Scheduler is an mobile application where one can schedule a conference or attend a existing conference.
-This application also has features where the attendees can lookup the details of their accomadations or book accomadations for the conference.
+Conference-Scheduler is an mobile application where one can view all the  conference details or attend a existing conference.
 
 ## Features of the application:
 <ol>
@@ -47,8 +46,8 @@ This application also has features where the attendees can lookup the details of
 * Chandra Mouli Kotteti - Mentor
 
 ## Technology Stack
-* Database: Google Firestack
-* App design: Android Studio
+* Database:SQL
+* App design: Xcode
 
 ## Requirements
 * To Create, schedule and manage your conference on this Conference Scheduling App to provide an interactive and personalized experience.
