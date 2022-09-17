@@ -1,0 +1,5 @@
+Conference Scheduler:
+landing on the homepage on the top of the page it shows the Title of the Application which is fixed, 
+and coming down displays flash cards where clicking on specific flash card it directs to the specified event
+and bottom of it we will have table view where we will have event name, location, and time.
+Coming to the bottom of the page  we will have two buttons which will direct to old events and also future events.
