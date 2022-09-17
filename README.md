@@ -59,12 +59,9 @@ Now the user ought to be able to access the page for scheduling conferences.
 
 ## UserStory
 signup/login will be displayed as soon as the user opens the app.
-Once the user clicks on the signup button it will navigate to a page where users need to enter his details to register and click on next/submit button.
-Then the user will navigate to homepage, it will have fields like schedule a conference, Logo, Signup/Login buttons, FlashCards with event name & Register buttons.
-Then the user will navigate to Registration Page , this page will have Person details when clicked on Register Button.
-Then the user will navigate to accomodation page which will ask for the details like place, time, event, Number of people including (children, adults)  Number of rooms , Type of the accomodation(House,Villa,Apartment,Hotels) and then click on search.
-Based on the requiremnts of the client the user will get the available rooms with price, rating, price.
-Then the user will land into Register page where the payment takes place, price varies for the user booking an accomodation from not booking an accomodation.
+Once the user clicks on the signup button it will navigate to a page where users need to enter his details to create an account and click on next/submit button.
+Then the user will navigate to homepage, it will have fields list or card view, Event List contains (Name of the events ,location, Timings, Track button),Button to view Old Conferences, Button to view Future Events.
+When a user clicks on the Name of the event, The page will be directed to Event Details Page which contains information like Event details, Speaker details, Location, Timings, and a registration link.
 
 ## Client Info
 McAtee Brooke, Nursing Department
