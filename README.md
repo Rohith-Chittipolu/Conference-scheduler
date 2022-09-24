@@ -70,3 +70,7 @@ McAtee Brooke, Nursing Department
 ## Satwika github link
 [githublink](https://github.com/GuntipallySatwika)
 [Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
+
+## Abdul github link
+[githublink](https://github.com/Shaik38)
+[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
