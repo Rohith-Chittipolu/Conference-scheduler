@@ -43,4 +43,4 @@ Rohith Chittipolu
 
 Guntipally Satwika Reddy
 • Started working on the database schema.
-• Need to implement tab-view-bar as per clients requirements.
+• Need to rebuild connection between UI and database again since we could not achieve it last time
