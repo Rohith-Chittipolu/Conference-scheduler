@@ -1,0 +1,19 @@
+Understand how the HTTP protocol works.
+REST APIs are based on the HTTP protocol, which is the communication protocol used by the world wide web.
+Understanding HTTP means knowing how URLs are structured, what actions you can express using HTTP methods, how you can express parameters in a request, 
+and how to send or receive data.
+
+
+Get a list of all the URLs to make the requests you need.
+Every REST API offers a series of URLs to fetch, create, update, and delete data on a server. These are unique to each API. Their structure depends on the choices 
+made by the developers that created the API. If you are lucky,your API of choice comes with proper documentation. Often though, especially 
+when you interface with a private API, you have to talk to the server-side developers.
+
+
+Perform a network request to get the data you need in your app.
+By putting together the elements I listed above, you can write the code to perform a remote API call and get back some data. Data comes in different formats,
+like binary data (for media files), JSON, XML, Markdown, HTML, or others.
+
+Before you can use such data in your app, you have to parse it and convert to your model types. Binary data is usually directly convertible into the appropriate 
+media types you find in the iOS SDK. In the case of structured data like JSON, parsing is also quite straightforward. For more complex formats like XML, 
+Markdown, and HTML you might have to write a custom parser.
