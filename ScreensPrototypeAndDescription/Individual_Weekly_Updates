@@ -79,3 +79,15 @@ Decided on implementing the xammp to connect database and swift.
 Aakanksha Reddy Sunkireddy
 Reffered how to embed navigation bar into the tab bar view
 Trying to embed navigation bar into the tab bar view
+
+Aishwarya Mallela 
+•	Fetch the user details data and populate the user details.
+•	Users enter details in the signup and push the data to database.
+•	Check the connection for signup table schema and the UI.
+•	A basic skeleton view of Tab Bar Controller.
+•	Resolve the Connection for Tab bar view and Outlet in View Controller.
+•	Enhance the features and functionality of the tab bar.
+•	Create an appropriate prototype for the tab bar as per application requirements.
+
+
+
