@@ -1,34 +1,34 @@
 ## Conference-scheduler
 
-## Table of Contents
+# Table of Contents
 
-[Project Objective](##Project Objective)
+1. [Introduction](#introduction)
 
-[Project description](##Project description)
+[Project description](#Project description)
 
-[Features of the application](##Features of the application)
+[Features of the application](#Features of the application)
 
-[Roles and Responsibilities](##Roles and Responsibilities)
+[Roles and Responsibilities](#Roles and Responsibilities)
 
-[Technology Stack](##Technology Stack)
+[Technology Stack](#Technology Stack)
 
-[Requirements](##Requirements)
+[Requirements](#Requirements)
 
-[User story](##User story)
+[User story](#User story)
 
-[Client Info](##Client Info)
+[Client Info](#Client Info)
 
 [Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
 
 [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
-## Project Objective: <a name="Project Objective"></a>
+## This is the introduction <a name="introduction"></a>
 The main purpose of this project is to create an application to view all the details and schedules of the events to the attendees where we have user pages and admin pages accordingly.
 
-## Project description: <a name="Project description"></a>
+## Project description <a name="Project description"></a>
 Conference-Scheduler is an mobile application where one can view all the  conference details or attend a existing conference.
 
-## Features of the application: <a name="Features of the application"></a>
+## Features of the application <a name="Features of the application"></a>
 <ol>
 <li>Sign Up</li>
 <li>Log In</li>
