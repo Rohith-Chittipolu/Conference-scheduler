@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-1. [Introduction](#introduction)
+1. [Project Objective](#Project Objective)
 
 [Project description](#Project description)
 
@@ -22,7 +22,7 @@
 
 [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
-## This is the introduction <a name="introduction"></a>
+## Project Objective <a name="Project Objective"></a>
 The main purpose of this project is to create an application to view all the details and schedules of the events to the attendees where we have user pages and admin pages accordingly.
 
 ## Project description <a name="Project description"></a>
