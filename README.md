@@ -4,31 +4,31 @@
 
 1. [Project Objective](#ProjectObjective)
 
-[Project description](#Project description)
+2. [Project description](#Projectdescription)
 
-[Features of the application](#Features of the application)
+3. [Features of the application](#Featuresoftheapplication)
 
-[Roles and Responsibilities](#Roles and Responsibilities)
+4. [Roles and Responsibilities](#RolesandResponsibilities)
 
-[Technology Stack](#Technology Stack)
+5. [Technology Stack](#TechnologyStack)
 
-[Requirements](#Requirements)
+6. [Requirements](#Requirements)
 
-[User story](#User story)
+7. [User story](#Userstory)
 
-[Client Info](#Client Info)
+8. [Client Info](#ClientInfo)
 
-[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
+9. [Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
 
-[Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
+10. [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
 ## Project Objective <a name="ProjectObjective"></a>
 The main purpose of this project is to create an application to view all the details and schedules of the events to the attendees where we have user pages and admin pages accordingly.
 
-## Project description <a name="Project description"></a>
+## Project description <a name="Projectdescription"></a>
 Conference-Scheduler is an mobile application where one can view all the  conference details or attend a existing conference.
 
-## Features of the application <a name="Features of the application"></a>
+## Features of the application <a name="Featuresoftheapplication"></a>
 <ol>
 <li>Sign Up</li>
 <li>Log In</li>
@@ -37,7 +37,7 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 <li>Push Notifications</li>
 </ol>
 
-## Roles and responsibilities <a name="Roles and Responsibilities"></a>
+## Roles and responsibilities <a name="RolesandResponsibilities"></a>
 * Chandra Mouli Kotteti - Mentor
 * Ms Brooke - Client
 * Rohith Chittipolu - Full stack
@@ -46,7 +46,7 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 * Aakanksha Reddy sunkireddy - UI/UX Design
 * Abdul Khayyam s shaik - Backend
 
-## Technology Stack <a name="Technology Stack"></a>
+## Technology Stack <a name="TechnologyStack"></a>
 * Database:SQL
 * App design: Xcode
 
@@ -59,12 +59,12 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 * The login page will have fields like email id or user name, password and login button.
 * Now the user ought to be able to access the page for scheduling conferences.
 
-## UserStory <a name="User story"></a>
+## UserStory <a name="Userstory"></a>
 * signup/login will be displayed as soon as the user opens the app.
 * Once the user clicks on the signup button it will navigate to a page where users need to enter his details to create an account and click on next/submit button.
 * Then the user will navigate to homepage, it will have fields list or card view, Event List contains (Name of the events ,location, Timings, Track button),Button to view Old Conferences, Button to view Future Events.
 * When a user clicks on the Name of the event, The page will be directed to Event Details Page which contains information like Event details, Speaker details, Location, Timings, and a registration link.
 
-## Client Info <a name="Client Info"></a>
+## Client Info <a name="ClientInfo"></a>
 McAtee Brooke, Nursing Department
 
