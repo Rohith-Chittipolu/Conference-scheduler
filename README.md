@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-1. [ProjectObjective](#Project Objective)
+1. [Project Objective](#ProjectObjective)
 
 [Project description](#Project description)
 
