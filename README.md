@@ -18,14 +18,13 @@
 
 * [Client Info](https://github.com/Rohith-Chittipolu/Conference-scheduler/edit/main/README.md#client-info)
 
-* [Satwika github link](https://github.com/Rohith-Chittipolu/Conference-scheduler/edit/main/README.md#satwika-github-link)
-
 * [Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
 
 * [Wiki Link](https://github.com/Rohith-Chittipolu/Conference-scheduler/wiki/Wiki-Home-Page)
 
 ## Project Objective:
 The main purpose of this project is to create an application to view all the details and schedules of the events to the attendees where we have user pages and admin pages accordingly.
+
 ## Project description:
 Conference-Scheduler is an mobile application where one can view all the  conference details or attend a existing conference.
 
@@ -33,17 +32,19 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 <ol>
 <li>Sign Up</li>
 <li>Log In</li>
-<li>View Events</li>
+<li>List of Events</li>
+<li>RSVP</li>
+<li>Push Notifications</li>
 </ol>
 
 ## Roles and responsibilities
+* Chandra Mouli Kotteti - Mentor
+* Ms Brooke - Client
 * Rohith Chittipolu - Full stack
 * Aishwarya Mallela - Frontend
 * Satwika Reddy Guntipally - Database
 * Aakanksha Reddy sunkireddy - UI/UX Design
 * Abdul Khayyam s shaik - Backend
-* Ms Brooke - Client
-* Chandra Mouli Kotteti - Mentor
 
 ## Technology Stack
 * Database:SQL
@@ -67,10 +68,3 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 ## Client Info
 McAtee Brooke, Nursing Department
 
-## Satwika github link
-[githublink](https://github.com/GuntipallySatwika)
-[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
-
-## Abdul github link
-[githublink](https://github.com/Shaik38)
-[Conference Scheduler Repo Link](https://github.com/Rohith-Chittipolu/Conference-scheduler)
