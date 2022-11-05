@@ -32,7 +32,7 @@ Abdul Shaik:
 
 09/26/2022 to 09/31/2022 
 Aishwarya Mallela: 
-•	An ER diagram and details for SignUp page.
+•	An ER diagram and details for SignUp page
 • Discussion on changing of prototypes for screens.
 •	Prepare for the workshop.
 •	Creating a worksheet for the workshop.
@@ -110,3 +110,8 @@ Rohith Chittipolu
 • Created a server instance and database in AWS RDS.
 •Connected Pg admin to AWS RDS. 
 
+10/28/2022 to 11/4/2022
+satwika Reddy Guntipally:
+•	Once the server instance to college server is created, I planned to write the Queries  for the designed schema.
+•	Planned to perfrom CRUD operations from Swift to PostgreSql server.
+• Validate the app , if app is able to read and write the data.
