@@ -115,3 +115,10 @@ satwika Reddy Guntipally:
 •	Once the server instance to college server is created, I planned to write the Queries  for the designed schema.
 •	Planned to perfrom CRUD operations from Swift to PostgreSql server.
 • Validate the app , if app is able to read and write the data.
+
+Aishwarya Mallela
+•	Implement a table with set of rows and columns of data in table view and pass the static data and populate in the dashboard/events screen.
+•	Data must pass dynamically to UI, establish database connection in xcode.
+• Make responsive screens and fetch the data from the database for all the tab bar views.
+• Create a List of events in the Events Tab bar and implement with a sample data.
+
