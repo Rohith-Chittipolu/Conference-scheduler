@@ -114,7 +114,7 @@ Rohith Chittipolu
 satwika Reddy Guntipally:
 •	Once the server instance to college server is created, I planned to write the Queries  for the designed schema.
 •	Planned to perfrom CRUD operations from Swift to PostgreSql server.
-• Validate the app , if app is able to read and write the data.
+• Validate the app , to test if the app is able to read and update the data.
 
 Aishwarya Mallela
 •	Implement a table with set of rows and columns of data in table view and pass the static data and populate in the dashboard/events screen.
