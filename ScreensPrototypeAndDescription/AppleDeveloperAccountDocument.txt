@@ -1,0 +1,26 @@
+How to create an Apple Developer Account
+Before we begin, we should note that if you have multiple apps in our system, each app will need to be housed in its own developer account.
+
+Step 1: Go to Apple’s developer website and create an Apple ID if you don’t already have one and set up two-factor authentication for your account
+
+Go to https://developer.apple.com/
+
+
+Step 2: Click “Join the Apple Developer Program”
+Step 3: Confirm that your email address, name, and Country location is correct, then select the type of account that you’re enrolling as
+
+
+Step 4: Enter in your contact information and read through the agreement at the bottom of the page
+
+Step 5: Verify your account information then click “Continue”.
+
+Step 6: Decide if you want Automatic Renewal 
+
+Step 7: On the next page, sign in with your Apple ID.
+
+Step 9: Fill out the rest of the information on the proceeding screens
+
+Step 10: Upgrade your plan in our system
+
+Step 11: Enter in your app’s details in the Publishing Information section of the app dashboard
+
