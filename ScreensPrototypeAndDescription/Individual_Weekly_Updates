@@ -134,3 +134,11 @@ Abdul Khayyam sahib Shaik
 Aakanksha Reddy Sunkireddy
 • Establised a table view in My Event page
 • Tried to establish data dynamically into the My Event page once the database connection is done
+
+11/07/22 to 11/11/22
+Aishwarya Mallela
+•	Events Tab bar has implemented with a static data and populating the table in the dashboard.
+•	Created a List of events in swift for the Events Tab bar.
+•	Client meeting with the update and discussion with Android team for deciding on centralized database
+•	Enhancements for the More Tab Bar Controller and Sub Views.
+
