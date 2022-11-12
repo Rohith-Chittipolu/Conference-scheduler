@@ -139,3 +139,8 @@ Aakanksha Reddy Sunkireddy
 Rohith Chittipolu
 Tried to establish a connection from our app to the university server
 Met with the client and gave project updates
+
+Satwika Reddy Guntipally:
+Worked on the database instance creation for college server along with rohith.
+Shifted to Amazon rds as we are facing error while connecting to college server.
+Created Tables and inserted dummy data for the testing purposes.
