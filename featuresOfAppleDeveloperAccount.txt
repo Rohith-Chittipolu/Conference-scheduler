@@ -1,0 +1,49 @@
+Xcode
+The Xcode integrated development environment (IDE) includes everything you need to build and upload apps for iPhone, iPad, Mac, Apple TV, and Apple Watch.
+
+
+
+App Store Connect
+Easily submit and manage your apps on the App Store.
+
+Create App Store product pages.
+Test apps with TestFlight by inviting up to 10,000 external testers using a public link or their email address.
+Submit apps for review.
+Create promotional offers and promo codes.
+Set up pricing, subscriptions, and availability.
+Offer pre-orders and app bundles.
+Get app thinning and up to 20GB of on-demand asset storage per app.
+Manage your team.
+Respond to reviews.
+View app analytics to measure your app’s performance with data you won’t find anywhere else.
+View sales and trends.
+View and download payments and financial reports.
+Access App Store Connect tools with a REST API.
+
+
+Certificates, Identifiers & Profiles
+Enable development, distribution, and services for your app.
+
+CloudKit Dashboard
+Get a detailed view of your app’s server activity with CloudKit.
+
+Create ML
+Build, train, and deploy machine learning models with no machine learning expertise required.
+
+MapKit JS Dashboard
+Track your website’s use of Apple Maps services.
+
+Reality Composer
+Quickly prototype and produce content for AR experiences.
+
+Reality Converter
+Convert, view, and customize USDZ 3D objects on Mac.
+
+Snapshots Studio (beta)
+Customize static map images for your website.
+
+SF Symbols
+Choose from thousands of configurable symbols for use in your apps.
+
+Classroom and Schoolwork
+Test your educational apps that work with the Classroom and Schoolwork apps.
