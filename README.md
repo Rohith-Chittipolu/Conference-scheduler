@@ -68,3 +68,5 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 ## Client Info <a name="ClientInfo"></a>
 McAtee Brooke, Nursing Department
 
+Approach for Functionality:
+As our research shown us crating api's and hosting them in a remote server and calling them for functionalities inside the app is a safe and reliable approach we are trying that approach.
