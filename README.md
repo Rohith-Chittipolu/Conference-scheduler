@@ -70,3 +70,8 @@ McAtee Brooke, Nursing Department
 
 Approach for Functionality:
 As our research shown us crating api's and hosting them in a remote server and calling them for functionalities inside the app is a safe and reliable approach we are trying that approach.
+
+## Change of approach <a name="ChangeOfApproach"></a>
+* As designing and hosting of APIs is taking alot of time and getting a little complicated we decided to use google firebase as our database for both andriod and ios apps.
+* From next week we will be working with the firebase and develop all the functionalities within xcode.
+
