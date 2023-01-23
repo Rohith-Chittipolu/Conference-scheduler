@@ -210,3 +210,11 @@ Rohith Chittipolu
 Worked on the admit API along with satwika guntipally
 Started working on CRUd APis for all the seven tables but stopped due to change of database
 Will start working on the connection between the application and the object model google firebase database
+
+Aishwarya Mallela
+•	Looked at a few examples for connecting APIs with database
+•	Check for writing APIs and populate the response data and another API to display in the Schedule tab.
+•	Checked out the APIs to populate a set of static data in the iOS application
+•	Start working on linking one API with another API for the dashboard page with a list of events
+•	Discussion with the Android team and finalized using the firebase database for the backend.
+
