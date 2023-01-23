@@ -47,8 +47,10 @@ Conference-Scheduler is an mobile application where one can view all the  confer
 * Abdul Khayyam s shaik - Backend
 
 ## Technology Stack <a name="TechnologyStack"></a>
-* Database:SQL
+* Database: Firebase
 * App design: Xcode
+* Hosted : University Server
+Application development is in iOS platform and a centralized firebase database is used for both Andoid an iOS application. 
 
 ## Requirements <a name="Requirements"></a>
 * To Create, schedule and manage your conference on this Conference Scheduling App to provide an interactive and personalized experience.
