@@ -77,3 +77,6 @@ As our research shown us crating api's and hosting them in a remote server and c
 * As designing and hosting of APIs is taking alot of time and getting a little complicated we decided to use google firebase as our database for both andriod and ios apps.
 * From next week we will be working with the firebase and develop all the functionalities within xcode.
 
+## Realtime Database and Firestore Database
+<https://www.geeksforgeeks.org/realtime-database-vs-firestore/>
+<https://www.javatpoint.com/firebase-firestore-vs-realtime-database>
