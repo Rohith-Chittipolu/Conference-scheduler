@@ -1,0 +1,23 @@
+import FirebaseAuth
+
+// Register a new user
+func registerUser(email: String, password: String, completion: @escaping (_ error: Error?) -> Void) {
+    Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        if let error = error {
+            completion(error)
+        } else {
+            completion(nil)
+        }
+    }
+}
+
+// Login an existing user
+func loginUser(email: String, password: String, completion: @escaping (_ error: Error?) -> Void) {
+    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if let error = error {
+            completion(error)
+        } else {
+            completion(nil)
+        }
+    }
+}
