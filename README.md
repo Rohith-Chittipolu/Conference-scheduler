@@ -78,5 +78,15 @@ As our research shown us crating api's and hosting them in a remote server and c
 * From next week we will be working with the firebase and develop all the functionalities within xcode.
 
 ## Realtime Database and Firestore Database
+Pros
+User authentication
+Server-less application management
+Performing searches in documentary datasets
+
+cons
+Searches/filters using multiple conditions
+Detailed analytics/metrics
+
+
 <https://www.geeksforgeeks.org/realtime-database-vs-firestore/>
 <https://www.javatpoint.com/firebase-firestore-vs-realtime-database>
