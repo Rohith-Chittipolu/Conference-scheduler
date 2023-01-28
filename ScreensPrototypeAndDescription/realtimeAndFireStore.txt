@@ -1,0 +1,47 @@
+Cloud Firestore is Firebase's newest database for mobile app development. It builds on the successes of the Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales further than the Realtime Database.
+
+Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime.
+
+
+Realtime Database
+Stores data as one large JSON tree.
+Simple data is very easy to store.
+Complex, hierarchical data is harder to organize at scale.
+
+Cloud Firestore
+Stores data as collections of documents.
+Simple data is easy to store in documents, which are very similar to JSON.
+Complex, hierarchical data is easier to organize at scale, using subcollections within documents.
+Requires less denormalization and data flattening.
+
+
+
+Retrieve, sort, and filter data from either database through queries.
+
+Realtime Database	
+Deep queries with limited sorting and filtering functionality.
+Queries can sort or filter on a property, but not both.
+Queries are deep by default: they always return the entire subtree.
+Queries can access data at any granularity, down to individual leaf-node values in the JSON tree.
+Queries do not require an index; however the performance of certain queries degrades as your data set grows.
+
+Cloud Firestore
+Indexed queries with compound sorting and filtering.
+You can chain filters and combine filtering and sorting on a property in a single query.
+Queries are shallow: they only return documents in a particular collection or collection group and do not return subcollection data.
+Queries must always return whole documents.
+Queries are indexed by default: Query performance is proportional to the size of your result set, not your data set.
+
+Security
+Realtime Database
+Cascading rules language that separates authorization and validation.
+Reads and writes from mobile SDKs secured by Realtime Database Rules.
+Read and write rules cascade.
+You validate data separately using the validate rule.
+
+Cloud Firestore
+Non-cascading rules that combine authorization and validation.
+Reads and writes from mobile SDKs secured by Cloud Firestore Security Rules.
+Reads and writes from server SDKs secured by Identity and Access Management (IAM).
+Rules don't cascade unless you use a wildcard.
+Rules can constrain queries: If a query's results might contain data the user doesn't have access to, the entire query fails.
