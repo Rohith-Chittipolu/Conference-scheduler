@@ -1,0 +1,11 @@
+func createEvent(eventName: String, time: Timestamp, location: GeoPoint, completion: @escaping (_ error: Error?) -> Void) {
+    let eventRef = Firestore.firestore().collection("events").document()
+    let eventData = ["eventname": eventName, "time": time, "location": location]
+    eventRef.setData(eventData) { (error) in
+        if let error = error {
+            completion(error)
+        } else {
+            completion(nil)
+        }
+    }
+}
