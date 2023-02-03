@@ -244,3 +244,10 @@ Abdul Khayyam sahib Shaik
 •	Started developing a database according to firestore.
 •	Met client and explained why switching to the firebase from Postgres for approval.
 •	explored Advantages and disadvantages of firebase and firestore and finalized which one is suitable for our application.
+
+
+2/3/2023
+Satwika Reddy Guntipally
+•	Created the Table for the Users and conference pages.
+•	Added Configuration file in xcode for the integration of the database.
+
