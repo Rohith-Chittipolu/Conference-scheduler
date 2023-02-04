@@ -1,0 +1,23 @@
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+# Use the application default credentials
+cred = credentials.ApplicationDefault()
+firebase_admin.initialize_app(cred, {
+  'projectId': 'your-project-id',
+})
+
+db = firestore.client()
+
+# Define the data for the new document
+data = {
+    'file_name': 'sample.pdf',
+    'file_type': 'pdf',
+    'url': 'https://sample-pdf-url.com/sample.pdf',
+    'timestamp': firestore.SERVER_TIMESTAMP
+}
+
+# Add a new document to the 'files' collection
+doc_ref = db.collection('files').add(data)
+print('Document added with ID:', doc_ref.id)
