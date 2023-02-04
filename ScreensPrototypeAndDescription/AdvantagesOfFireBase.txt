@@ -1,0 +1,20 @@
+What Is Firebase?
+Firebase is Google’s Backend-as-a-Service (BAAS) solution for mobile app development. Originally, it was developed and launched in 2011 by Firebase Inc. and was later acquired by Google in 2014. Initially it started off as a realtime database and now offers developers and marketers a comprehensive selection of tools and products that not only help develop advanced applications, but also market them. The Firebase platform allows for easy integration with IOS, Android, Web, and Unity products. There is a lot to learn about the platform, however in this article we will cover the top five benefits of using Firebase by Google.
+
+Benefit #1: Google Analytics For Firebase
+Google Analytics for Firebase allows you to track your users’ journey through realtime and custom reporting. As mentioned previously, Firebase supports IOS, Android, Web, and Unity products, allowing you to track your users across a wide range of devices. According to Google, Firebase provides unlimited free reporting on up to 500 distinct events. Just like the regular Google Analytics, Google Analytics for Firebase automatically tracks certain key events and user parameters straight out of the box, and allows you to define custom events that are important to your application. Lastly, Google Analytics for Firebase tracks and integrates with various analytical partners such as Google Ads, Admob, TradeMob, and many more
+
+Benefit #2: Realtime Database & Firestore
+Firebase was originally developed to be a realtime database, and today that is still one of its key features. The Realtime Database is essentially a cloud-hosted NoSQL database that stores data as JSON (JavaScript Object Notation) in real time. One of the key advantages for Firebase’s Realtime Database is that it works offline by using local cache on the device to store any changes made. When app connectivity is resumed, the data is synced.
+
+In 2018, Google released their newest database called Firestore, and like its predecessor it is a NoSQL database. Some of the advantages of using Firestore over Realtime Database is its ability to handle complex and hierarchy-based data at scale, and its ability to run queries at a faster rate. Firestore is also more reliable and offers better performance than Realtime as the data is shared across multiple data centers in different regions, providing strong reliability and the ability to scale globally. For more of the advantages and disadvantages of using either solution
+
+Benefit #3: Authentication
+Most apps have some form of authentication feature that is necessary to identify the user. Thanks to Firebase’s easy-to-use SDK, ready-made UI libraries, and backend services, it is possible to set up the whole authentication process in just a couple of minutes. Firebase allows users to authenticate with their phone number, email, Google, and Facebook accounts
+
+Benefit #4: Crashlytics
+Firebase Crashlytics allows you to track, prioritize, and fix stability issues that erode your app quality. Crashlytics sends you realtime detailed alerts whenever a bug or crash occurs. Using the detailed reports, developers and testers can find and fix bugs at a faster pace. Using Crashlytics’ out-of-the-box integration with Google Analytics provides developers with a secondary method for debugging using the ‘app_exception’ event. 
+
+Benefit #5: Free Use of Dynamic Links
+Firebase Dynamic Links are smart URLs that enable marketers to promote the app across various external channels, such as social media, email, web, and more found here. One of the best features of dynamic links is the fact that they are usable by both app users and those that don’t have the app installed. For a more detailed walkthrough of Dynamic Links
+
