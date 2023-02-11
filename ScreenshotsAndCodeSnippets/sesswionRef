@@ -1,0 +1,53 @@
+import Foundation
+
+class LoginSession {
+    static let shared = LoginSession()
+    private init() {}
+    
+    // User's email and token
+    private(set) var email: String?
+    private(set) var token: String?
+    
+    // Token expiration date
+    private var expirationDate: Date?
+    
+    // Function to log in the user
+    func login(email: String, token: String, expirationDate: Date) {
+        self.email = email
+        self.token = token
+        self.expirationDate = expirationDate
+        
+        // Schedule a notification to refresh the token before it expires
+        scheduleTokenRefresh()
+    }
+    
+    // Function to log out the user
+    func logout() {
+        self.email = nil
+        self.token = nil
+        self.expirationDate = nil
+        
+        // Remove the scheduled notification
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
+    // Function to schedule a token refresh
+    private func scheduleTokenRefresh() {
+        let refreshInterval = expirationDate!.timeIntervalSinceNow - 60 * 15
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: refreshInterval, repeats: false)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Token Refresh"
+        content.body = "Refreshing the token to maintain the login session."
+        
+        let request = UNNotificationRequest(identifier: "TokenRefresh", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error scheduling notification: \(error)")
+            } else {
+                print("Notification successfully scheduled.")
+            }
+        }
+    }
+}
