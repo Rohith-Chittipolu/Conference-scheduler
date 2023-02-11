@@ -1,0 +1,30 @@
+import FirebaseFirestore
+
+// Get a reference to the Firestore database
+let db = Firestore.firestore()
+
+// Function to update a document in the "users" collection
+func updateUser(email: String, newName: String) {
+    // Get the document with the matching email address
+    db.collection("users").whereField("email", isEqualTo: email).getDocuments { (querySnapshot, error) in
+        if let error = error {
+            print("Error getting documents: \(error)")
+        } else {
+            for document in querySnapshot!.documents {
+                // Update the "name" field in the document
+                document.reference.updateData([
+                    "name": newName
+                ]) { (error) in
+                    if let error = error {
+                        print("Error updating document: \(error)")
+                    } else {
+                        print("Document successfully updated!")
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Example usage
+updateUser(email: "user@example.com", newName: "Jane Doe")
