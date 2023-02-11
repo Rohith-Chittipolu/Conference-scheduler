@@ -277,5 +277,11 @@ Aakanksha Reddy Sunkireddy
 •Learnt about CRUD operations
 •Implemented CRUD operations on UI
 
+Aishwarya Mallela
+•	Created a conference item as an Admin.
+•	Added list of events to a conference.
+•	Integrated the conference events details from Admin to User screens.
+•	Fetch the data entered by admin and populate in User dashboard.
+•	Displayed the list of conference events in the User screen.
 
 
