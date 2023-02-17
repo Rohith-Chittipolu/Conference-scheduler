@@ -1,0 +1,13 @@
+Encrypting calls from an iOS app to a Firestore database involves several steps. Here's a general overview of the process:
+
+Enable SSL for Firestore: Firestore supports SSL by default, which encrypts data sent between your app and the Firestore servers. Make sure to use the Firestore library for iOS to ensure that all connections to Firestore are secured.
+
+Implement end-to-end encryption: If you want to ensure that the data stored in Firestore is encrypted end-to-end, you can encrypt the data before sending it to Firestore and decrypt it after retrieving it from Firestore. There are several encryption algorithms you can use, such as AES, RSA, and SHA.
+
+Generate encryption keys: To implement end-to-end encryption, you'll need to generate encryption keys that your app uses to encrypt and decrypt data. Make sure to use a secure random number generator to generate these keys.
+
+Store encryption keys securely: To ensure that encryption keys are not accessible to unauthorized users, you should store them securely. You can store them in the iOS Keychain, which is designed to store sensitive information such as passwords and encryption keys.
+
+Use a secure communication channel: Make sure to use a secure communication channel to send data between your app and Firestore. You can use HTTPS, which encrypts data sent over the network, to secure your communication channel.
+
+By implementing these steps, you can help ensure that calls from your iOS app to Firestore database are encrypted and secure.
