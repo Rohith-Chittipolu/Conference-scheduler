@@ -1,0 +1,23 @@
+First, you'll need to generate a secure key to encrypt and decrypt your data. You can use the CommonCrypto library provided by Apple to generate a random key.
+
+let keySize = kCCKeySizeAES256
+var keyData = Data(count: keySize)
+let result = keyData.withUnsafeMutableBytes { SecRandomCopyBytes(kSecRandomDefault, keySize, $0.baseAddress!) }
+guard result == errSecSuccess else {
+    print("Error generating random bytes: \(result)")
+    return
+}
+Next, you'll need to use the generated key to encrypt your data before sending it to Firestore. You can use the CommonCrypto library to encrypt your data.
+let plaintext = "Data to be encrypted".data(using: .utf8)!
+let ivSize = kCCBlockSizeAES128
+var ivData = Data(count: ivSize)
+let result = ivData.withUnsafeMutableBytes { SecRandomCopyBytes(kSecRandomDefault, ivSize, $0.baseAddress!) }
+guard result == errSecSuccess else {
+    print("Error generating random bytes: \(result)")
+    return
+}
+
+let encrypted = try plaintext.encrypt(using: keyData, iv: ivData)
+Finally, when retrieving data from Firestore, you'll need to decrypt the data using the same key that was used to encrypt it.
+
+let decrypted = try encrypted.decrypt(using: keyData, iv: ivData)
