@@ -1,0 +1,18 @@
+@IBAction func saveButtonTapped(_ sender: UIButton) {
+    guard let newName = nameTextField.text, let newEmail = emailTextField.text else {
+        return
+    }
+
+    // Update the user object with the new values
+    currentUser.name = newName
+    currentUser.email = newEmail
+
+    // Save the changes
+    saveChangesToUser()
+
+    // Display a success message to the user
+    let alertController = UIAlertController(title: "Profile updated", message: "Your profile has been updated successfully.", preferredStyle: .alert)
+    let okayAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(okayAction)
+    present(alertController, animated: true, completion: nil)
+}
