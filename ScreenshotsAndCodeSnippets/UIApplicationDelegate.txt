@@ -1,0 +1,12 @@
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    // Convert device token to string format
+    let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+    // Send the device token to your server to enable push notifications
+}
+
+
+
+
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    // Handle incoming notification
+}
