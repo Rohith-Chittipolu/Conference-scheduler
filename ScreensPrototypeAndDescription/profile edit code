@@ -1,0 +1,27 @@
+func saveUserProfile() {
+    guard let userId = Auth.auth().currentUser?.uid else { return }
+    
+    let userRef = Firestore.firestore().collection("users").document(userId)
+    
+    userRef.updateData([
+        "name": nameTextField.text ?? "",
+        "email": emailTextField.text ?? ""
+    ]) { (error) in
+        if let error = error {
+            print("Error updating document: \(error)")
+        } else {
+            print("Document successfully updated")
+            
+            // If the user has selected a new profile image, upload it to Firebase Storage and update the profileImageUrl field in Firestore
+            if let profileImage = profileImageView.image {
+                let storageRef = Storage.storage().reference().child("profile_images").child("\(userId).jpg")
+                
+                if let imageData = profileImage.jpegData(compressionQuality: 0.5) {
+                    storageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                        if let error = error {
+                            print("Error uploading image: \(error)")
+                        } else {
+                            storageRef.downloadURL { (url, error) in
+                                if let error = error {
+                                    print("Error retrieving image URL: \(error)")
+                                } else {
