@@ -343,3 +343,6 @@ UI push notification POC is developed and waiting on client for payment.
 developer account is created
 edit profile functionality is fixed.
 
+3/3/2023
+satwika Reddy Guntipally
+Created a swift file to store the deleted conference details in another database.
