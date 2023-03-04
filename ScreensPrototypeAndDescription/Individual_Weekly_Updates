@@ -357,3 +357,8 @@ Worked on edit functionality errors
 Working on changes suggested by the client
 Working on ui improvement
 
+Aishwarya Mallela
+•	Used a commoncrypto library for encryption of sensitive data in UI.
+•	Implement validations in signup and login screens.
+•	I/O validations on User details.
+•	A method with a session expire of 10 minutes.
