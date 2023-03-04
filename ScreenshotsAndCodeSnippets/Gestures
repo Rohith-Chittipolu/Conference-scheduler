@@ -1,0 +1,21 @@
+let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+view.addGestureRecognizer(tapGesture)
+
+@objc func handleTap(_ gesture: UITapGestureRecognizer) {
+    // Code for handling the tap gesture
+}
+let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+view.addGestureRecognizer(panGesture)
+
+@objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+    let translation = gesture.translation(in: view)
+    view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+    gesture.setTranslation(CGPoint.zero, in: view)
+}
+let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+swipeGesture.direction = .left
+view.addGestureRecognizer(swipeGesture)
+
+@objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
+    // Code for handling the swipe gesture
+}
