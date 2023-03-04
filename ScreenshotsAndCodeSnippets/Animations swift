@@ -1,0 +1,14 @@
+UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveEaseInOut], animations: {
+    // Code for the animation
+    view.frame.origin.y += 100
+}, completion: nil)
+let animation = CABasicAnimation(keyPath: "opacity")
+animation.fromValue = 0.0
+animation.toValue = 1.0
+animation.duration = 1.0
+
+view.layer.add(animation, forKey: "opacityAnimation")
+UIView.animate(withDuration: 1.0) {
+    // Code for the animation
+    view.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+}
