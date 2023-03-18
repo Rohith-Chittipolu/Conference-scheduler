@@ -1,0 +1,15 @@
+Log in to your Apple Developer account at https://developer.apple.com/account/.
+
+Click on the "Certificates, IDs & Profiles" section.
+
+Under the "Identifiers" section, select the app identifier for which you want to generate the token.
+
+Scroll down to the "Push Notifications" section and click on the "Configure" button.
+
+Follow the instructions to create a new Push Notification SSL Certificate or use an existing one.
+
+Once you have the certificate, click on the "Generate" button next to the "Token" section.
+
+Download the generated token file (in .p8 format) and keep it secure.
+
+Use the token file in your iOS code to send push notifications to your app
