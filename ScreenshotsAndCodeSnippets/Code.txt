@@ -1,0 +1,36 @@
+import UIKit
+import UserNotifications
+
+class ViewController: UIViewController, UNUserNotificationCenterDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Request permission for notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if granted {
+                print("Permission granted")
+                UNUserNotificationCenter.current().delegate = self
+            } else {
+                print("Permission denied")
+            }
+        }
+    }
+    
+    @IBAction func sendNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Notification Title"
+        content.body = "Notification message goes here"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
+    }
+}
