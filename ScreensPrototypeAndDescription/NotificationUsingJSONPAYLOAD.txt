@@ -1,0 +1,37 @@
+// Sample JSON payload for notification
+let payload = [
+    "aps": [
+        "alert": [
+            "title": "Notification Title",
+            "body": "Notification Body"
+        ],
+        "sound": "default"
+    ],
+    "custom_key": "Custom Value"
+] as [String: Any]
+
+// Convert payload to JSON data
+let jsonData = try? JSONSerialization.data(withJSONObject: payload, options: [])
+
+// Create notification request
+let url = URL(string: "https://api.push.apple.com/3/device/DEVICE_TOKEN") // Replace DEVICE_TOKEN with the device token of the receiving device
+var request = URLRequest(url: url!)
+request.httpMethod = "POST"
+request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+request.addValue("Bearer YOUR_AUTH_TOKEN", forHTTPHeaderField: "Authorization") // Replace YOUR_AUTH_TOKEN with your authentication token
+request.httpBody = jsonData
+
+// Send notification request
+let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+let task = session.dataTask(with: request) { (data, response, error) in
+    if let error = error {
+        print("Error: \(error.localizedDescription)")
+    } else if let httpResponse = response as? HTTPURLResponse {
+        if httpResponse.statusCode == 200 {
+            print("Notification sent successfully.")
+        } else {
+            print("Error sending notification. Status code: \(httpResponse.statusCode)")
+        }
+    }
+}
+task.resume()
