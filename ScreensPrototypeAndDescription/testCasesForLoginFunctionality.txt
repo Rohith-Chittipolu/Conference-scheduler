@@ -1,0 +1,27 @@
+Test Case: Login Functionality
+
+Objective: To verify the functionality of the login feature in the mobile app.
+
+Pre-conditions:
+
+The mobile app is installed on the device
+User account is created and login credentials are available
+Steps:
+
+Launch the mobile app
+Tap on the login button on the app's home screen
+Enter the valid login credentials in the respective fields
+Tap on the "Login" button
+Verify that the app navigates to the user's dashboard or home screen
+Verify that the user's name or profile picture is displayed on the dashboard/home screen
+Verify that the logout button is displayed on the dashboard/home screen
+Post-conditions:
+
+The user is successfully logged into the app and is able to access their account and dashboard/home screen.
+If any of the steps fail, an appropriate error message is displayed on the screen.
+Note:
+
+If the user enters invalid login credentials, the error message should be displayed on the screen.
+If the app has a "Remember Me" functionality, verify that the user remains logged in even after closing and reopening the app.
+
+
