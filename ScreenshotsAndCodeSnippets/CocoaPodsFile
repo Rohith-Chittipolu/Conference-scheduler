@@ -1,0 +1,6 @@
+import Lottie
+
+let animationView = AnimationView(name: "your_animation_file")
+animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+view.addSubview(animationView)
+animationView.play()
