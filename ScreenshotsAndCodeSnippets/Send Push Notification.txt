@@ -1,0 +1,19 @@
+// Set the notification content
+let content = UNMutableNotificationContent()
+content.title = "Title"
+content.body = "Notification Body"
+
+// Set the notification trigger
+let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+// Set the request with identifier
+let request = UNNotificationRequest(identifier: "identifier", content: content, trigger: trigger)
+
+// Schedule the notification
+UNUserNotificationCenter.current().add(request) { (error) in
+    if let error = error {
+        print("Failed to schedule notification: \(error.localizedDescription)")
+    } else {
+        print("Notification scheduled.")
+    }
+}
