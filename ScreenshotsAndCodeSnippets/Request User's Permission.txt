@@ -1,0 +1,11 @@
+import UserNotifications
+
+// Request permission to send notifications
+UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+    // Enable or disable features based on authorization
+    if granted {
+        print("Notifications permission granted.")
+    } else {
+        print("Notifications permission denied.")
+    }
+}
