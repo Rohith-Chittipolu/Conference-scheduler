@@ -1,0 +1,10 @@
+import Spring
+
+let button = SpringButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+button.setTitle("Tap me!", for: .normal)
+view.addSubview(button)
+
+button.animation = "pop"
+button.curve = "easeIn"
+button.duration = 1.0
+button.animate()
