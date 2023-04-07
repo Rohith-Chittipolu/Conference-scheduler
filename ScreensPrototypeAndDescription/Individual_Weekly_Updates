@@ -450,3 +450,9 @@ Satwika Reddy Guntipally
 Aakanksha Reddy Sunkireddy
 •Added animations to the app
 •Added sounds to the app
+
+Aishwarya Mallela
+•	Provisioning profile and signing certificate into the Xcode.
+•	Creating an application in the app store using an Apple developer account.
+•	Add identifiers required for our application like push notifications.
+•	Add the number of devices with the UUID you want to test the code.
