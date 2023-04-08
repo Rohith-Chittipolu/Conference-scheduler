@@ -1,0 +1,21 @@
+struct Rotation3DView: View {
+    @State var angle: Double = 0.0
+    
+    var body: some View {
+        Rectangle()
+            .foregroundColor(Color.blue)
+            .frame(width: 100, height: 100)
+            .modifier(Rotation3DEffect(angle: angle, axis: (x: 1.0, y: 0.0, z: 0.0)))
+            .animation(Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true))
+            .onAppear {
+                self.angle = 360.0
+            }
+    }
+}
+
+struct Rotation3DEffect: GeometryEffect {
+    var angle: Double
+    var axis: (x: CGFloat, y: CGFloat, z: CGFloat)
+
+    var animatableData: Double {
+        get {
