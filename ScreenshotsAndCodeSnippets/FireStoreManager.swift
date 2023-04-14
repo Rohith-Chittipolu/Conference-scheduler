@@ -1,11 +1,11 @@
  
 import UIKit
-import FirebaseCore
 import FirebaseFirestore
 import FirebaseStorage
 import Firebase
 import FirebaseFirestoreSwift
- 
+import FirebaseMessaging
+import UserNotifications
 
 class FireStoreManager {
 
@@ -16,6 +16,7 @@ class FireStoreManager {
     var dbRefUsers : CollectionReference!
     var dbReConferences : CollectionReference!
     var dbSpeakers : CollectionReference!
+    var dbSponsors : CollectionReference!
     var db: Firestore!
     let conferenceImagesStorage : StorageReference!
    
@@ -26,9 +27,17 @@ class FireStoreManager {
         dbRefUsers = db.collection("Users")
         dbReConferences = db.collection("Conferences")
         dbSpeakers = db.collection("Speakers")
+        dbSponsors = db.collection("Sponsors")
         conferenceImagesStorage = Storage.storage().reference().child("ConferenceImages")
     }
     
+    func subscribeTopic(id:String) {
+        Messaging.messaging().subscribe(toTopic: id)
+    }
+    
+    func unSubscribeTopic(id:String) {
+        Messaging.messaging().unsubscribe(fromTopic: id)
+    }
     
     func signUp(userType: UserType,name:String,email:String,password:String) {
        
@@ -37,8 +46,8 @@ class FireStoreManager {
     
     func getConferences(completion: @escaping ([ConferencesModel])->()) {
         
-        self.dbReConferences.addSnapshotListener { querySnapshot, err in
-             
+        self.dbReConferences.order(by: "date", descending: true).addSnapshotListener { querySnapshot, err in
+       
             if let _ = err {
                 completion([])
             }else {
@@ -97,36 +106,7 @@ class FireStoreManager {
         }
         
     }
-    /*
-    func getScheduledEventsAsync(conferenceId: String) async -> [EventModel] {
-        let ref = dbReConferences.document(conferenceId).collection("Events")
-        
-        do {
-            let querySnapshot = try await ref.getDocuments()
-
-            var list: [EventModel] = []
-            for event in querySnapshot.documents {
-                let eventRef = event.reference.collection("Subscriber").whereField("email", isEqualTo: UserDefaultsManager.shared.getEmail().lowercased())
-                let eventQuerySnapshot = try await eventRef.getDocuments()
-                
-                if !eventQuerySnapshot.isEmpty {
-                    do {
-                        var data = try event.data(as: EventModel.self)
-                        data.mySubscribeDocumentID = eventQuerySnapshot.documents.first?.documentID ?? "11"
-                        list.append(data)
-                    } catch let error {
-                        print(error)
-                    }
-                }
-            }
-            return list
-        } catch let error {
-            print(error)
-            return []
-        }
-    }
-  */
-    
+ 
     func getScheduledEvents(conferenceId:String,completion: @escaping ([EventModel])->()) {
         
         let ref = dbReConferences.document(conferenceId).collection("Events")
@@ -186,14 +166,6 @@ class FireStoreManager {
                         showOkAlertAnyWhereWithCallBack(message: "Registration Success!!") {
                            
                             SceneDelegate.shared?.checkLogin()
-                            
-//                            if(userType == .ADMIN) {
-//                                SceneDelegate.shared?.checkLogin()
-//                            }else {
-//                                DispatchQueue.main.async {
-//                                    UIApplication.topViewController()!.navigationController?.popViewController(animated: true)
-//                                }
-//                            }
                             
                         }
                         
@@ -297,15 +269,14 @@ extension FireStoreManager {
 extension FireStoreManager {
     
  
-    func createEvent(speakerkey:String,conferenceId:String,eventName:String,eventDescription:String,speaker:String,aboutSpeaker:String,location:String,date:String,time:String,imageUrl:String,completion: @escaping ()->()) {
+    func createEvent(speakerkey:String,conferenceId:String,eventName:String,eventDescription:String,speaker:String,aboutSpeaker:String,location:String,date:String,time:String,imageUrl:String,type:String,surveyLink:String,completion: @escaping ()->()) {
         
         showLoading()
         
         let docRef = dbReConferences.document(conferenceId).collection("Events").document()
         let autoId = docRef.documentID
-
-        let data = ["conferenceId":conferenceId,"key" : autoId, "eventName":eventName, "eventDescription" : eventDescription,"speaker" :speaker ,"aboutSpeaker" : aboutSpeaker , "location" : location ,  "date" :date, "time" : time , "imageUrl" : imageUrl , "speakerkey" :  speakerkey]
-        
+        let data = ["conferenceId":conferenceId,"key" : autoId, "eventName":eventName, "eventDescription" : eventDescription,"speaker" :speaker ,"aboutSpeaker" : aboutSpeaker , "location" : location ,  "date" :date, "time" : time , "imageUrl" : imageUrl , "speakerkey" :  speakerkey, "type":type , "surveyLink" : surveyLink , "eventTime" : FieldValue.serverTimestamp()] as [String : Any]
+     
         docRef.setData(data){ err in
             
             hideLoading()
@@ -330,8 +301,8 @@ extension FireStoreManager {
         let docRef = dbReConferences.document()
         let autoId = docRef.documentID
 
-        let data = ["key" : autoId, "name":name , "imageUrl" : url]
-        
+        let data = ["key" : autoId, "name":name , "imageUrl" : url, "date" :  FieldValue.serverTimestamp()] as [String : Any]
+       
         docRef.setData(data) { err in
             
             hideLoading()
@@ -373,6 +344,31 @@ extension FireStoreManager {
       }
     }
     
+    func addSponsor(name:String,details:String,type:String,url:String,completion: @escaping ()->()) {
+        
+        showLoading()
+        
+        let docRef = dbSponsors.document()
+        let autoId = docRef.documentID
+
+        let data = ["key" : autoId, "name":name , "type" : type, "imageUrl" : url , "details" : details]
+        
+        docRef.setData(data) { err in
+            
+            hideLoading()
+            
+                   if let err = err {
+                       showAlertAnyWhere(message: "Error adding document: \(err)")
+                   } else {
+                       showOkAlertAnyWhereWithCallBack(message: "Sponsor added!!") {
+                          
+                          completion()
+                           
+                }
+        }
+      }
+    }
+    
     func scheduleEvent(event:EventModel) {
         
         showLoading()
@@ -391,14 +387,15 @@ extension FireStoreManager {
                     
                 } else {
                     print("Not subscribed")
-                    self.subscirbe(docRef: docRef)
+                    self.subscirbe(docRef: docRef,eventId:event.key)
                 }
             }
         }
     }
     
-    func subscirbe(docRef:CollectionReference) {
-        
+    func subscirbe(docRef:CollectionReference,eventId:String) {
+       
+       
         let data = ["email" : UserDefaultsManager.shared.getEmail().lowercased() , "token" : UserDefaultsManager.shared.getFirebaseToken()]
         
         showLoading()
@@ -408,6 +405,7 @@ extension FireStoreManager {
                    if let err = err {
                        showAlertAnyWhere(message: "Error adding document: \(err)")
                    } else {
+                       self.subscribeTopic(id: eventId)
                        showAlertAnyWhere(message: "Event added to your schedule list")
             }
         }
@@ -425,6 +423,29 @@ extension FireStoreManager {
                 for document in querySnapshot!.documents {
                     do {
                         let data = try document.data(as: SpeakersModel.self)
+                        list.append(data)
+                    }catch let error {
+                        print(error)
+                    }
+                }
+                completion(list)
+            }
+        }
+    }
+    
+    
+    func getSposors(completion: @escaping ([SponsorModel])->()) {
+        
+        self.dbSponsors.addSnapshotListener { querySnapshot, err in
+             
+            if let _ = err {
+                completion([])
+            }else {
+                
+                var list: [SponsorModel] = []
+                for document in querySnapshot!.documents {
+                    do {
+                        let data = try document.data(as: SponsorModel.self)
                         list.append(data)
                     }catch let error {
                         print(error)
@@ -471,6 +492,16 @@ extension FireStoreManager {
             if let error = error {
               completion(error)
             } else {
+                self.sendNotification(topic: event.key, title: "Event updated", body: "The event has been updated.", listener: { responseBody, error in
+                    if let error = error {
+                        // Handle error
+                        print("Error: \(error.localizedDescription)")
+                    } else if let responseBody = responseBody {
+                        // Handle response
+                        print("Response: \(responseBody)")
+                    }
+                })
+
                 showOkAlertAnyWhereWithCallBack(message: "Event Updated") {
                     completion(nil)
                 }
@@ -531,6 +562,28 @@ extension FireStoreManager {
     }
     
     
+    func updateProfile(name:String,completion: @escaping ()->()) {
+        
+        showLoading()
+        
+        let data = ["name" : name]
+        
+        dbRefUsers.document(UserDefaultsManager.shared.getKey()).updateData(data) { err in
+            
+            hideLoading()
+            
+                   if let err = err {
+                       showAlertAnyWhere(message: "Error adding document: \(err)")
+                   } else {
+                       showOkAlertAnyWhereWithCallBack(message: "Updated!!") {
+                          
+                          completion()
+                           
+            }
+        }
+      }
+    }
+    
     func deleteConference(key:String,completion: @escaping ()->()) {
         
         showLoading()
@@ -555,6 +608,27 @@ extension FireStoreManager {
       }
     }
     
+    func deleteEvent(confKey:String,eventKey:String,completion: @escaping ()->()) {
+        
+        showLoading()
+        
+        let docRef = dbReConferences.document(confKey).collection("Events").document(eventKey)
+        
+        docRef.delete(){ err in
+            
+            hideLoading()
+            
+                   if let err = err {
+                       showAlertAnyWhere(message: "Error deleting document: \(err)")
+                   } else {
+                       showOkAlertAnyWhereWithCallBack(message: "Event Deleted!!") {
+                          
+                          completion()
+                }
+        }
+      }
+    }
+    
     func removeSchedule(event:EventModel, completion: @escaping ()->()) {
         
         showLoading()
@@ -568,6 +642,7 @@ extension FireStoreManager {
                    if let err = err {
                        showAlertAnyWhere(message: "Error deleting document: \(err)")
                    } else {
+                       self.unSubscribeTopic(id:event.key)
                        showOkAlertAnyWhereWithCallBack(message: "Schedule Deleted!!") {
                           completion()
                 }
@@ -603,5 +678,41 @@ extension FireStoreManager {
         }
         
     }
+    
+    func sendNotification(topic: String, title: String, body: String, listener: @escaping (String?, Error?) -> Void) {
+        let url = URL(string: "https://fcm.googleapis.com/fcm/send")!
+        let apiKey = "AAAAF2z6Hlk:APA91bE6AWbm0V5pUHhPfh-a3NgILaXHbSTbIS8kXMaA9d6RKixZYX954Xp0wmo9SQIR9loYUKzTNvOBcT-IssWrbhSP2FRGhZ8H8rMW_cgoyLczF5XLSgA3_ErEvJAM3gr3x484Awdg"
+
+        var payload = [String: Any]()
+        payload["to"] = "/topics/\(topic)"
+        payload["notification"] = ["title": title, "body": body]
+
+        guard let payloadData = try? JSONSerialization.data(withJSONObject: payload, options: []) else {
+            listener(nil, NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unable to serialize payload"]))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("key=\(apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpBody = payloadData
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data, let response = response as? HTTPURLResponse else {
+                listener(nil, error)
+                return
+            }
+
+            if response.statusCode == 200 {
+                let responseBody = String(data: data, encoding: .utf8)
+                listener(responseBody, nil)
+            } else {
+                listener(nil, NSError(domain: "", code: response.statusCode, userInfo: nil))
+            }
+        }
+        task.resume()
+    }
+
 }
  
