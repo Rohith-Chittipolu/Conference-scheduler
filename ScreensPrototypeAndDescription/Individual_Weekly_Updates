@@ -466,3 +466,13 @@ Abdul khayyam sahib Shaik
 • Making an app utilizing an Apple developer account in the app store.
 • Include the identifiers our application needs, such as push notifications.
 • Include how many UUID-equipped devices you want to test the code on.
+
+
+04/14/2023
+
+Aishwarya Mallela
+•	Connecting iPhone device to XCode.
+•	Install the conference schedular app in the device.
+•	Add the device name and UUID in the apple developer account.
+•	Run the application in the XCode once by device and then by simulator.
+•	Allow notifications in the iPhone device after installation.
