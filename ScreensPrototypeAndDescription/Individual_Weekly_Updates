@@ -499,7 +499,13 @@ Abdul Khayyam sahib Shaik
 •	In the Apple developer account, add the device name and UUID.
 •	Activate the notifications feature
 •	Run the app in XCode on a device first, then on a simulator.
-Rohith Chittipolu
 
+04/21/2023
+Rohith Chittipolu
 • Worked on documentation
 • Worked on functional testing of the app 
+
+Aakanksha Reddy Sunkireddy
+•Worked on the user interface of the app
+•Implemented the sounds for all the pages of the application
+•Trying to implement the sounds for the alert pop-ups
