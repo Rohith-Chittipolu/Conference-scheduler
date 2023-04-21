@@ -1,0 +1,24 @@
+Test Case 1: User Login
+
+Launch the application.
+Enter a valid user email and password.
+Tap the "Login" button.
+Expected Result: The user is successfully logged in and redirected to the main screen displaying conference details.
+Test Case 2: Admin Login
+
+Launch the application.
+Enter a valid admin email and password.
+Tap the "Login" button.
+Expected Result: The admin is successfully logged in and redirected to the admin dashboard, where they can create, edit, and delete events.
+Test Case 3: Super Admin - Add Admin
+
+Log in as a super admin.
+Navigate to the "Add Admin" section.
+Enter the required admin information and tap the "Add Admin" button.
+Expected Result: A new admin is successfully added, and a confirmation message is displayed.
+Test Case 4: Admin - Create Event
+
+Log in as an admin.
+Navigate to the "Create Event" section.
+Enter the required event details and tap the "Create Event" button.
+Expected Result: The event is successfully created, and a confirmation message is displayed.
