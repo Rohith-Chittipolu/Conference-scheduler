@@ -22,3 +22,31 @@ Log in as an admin.
 Navigate to the "Create Event" section.
 Enter the required event details and tap the "Create Event" button.
 Expected Result: The event is successfully created, and a confirmation message is displayed.
+
+Test Case 5: User - View Event Details
+
+Log in as a user.
+Browse the list of events.
+Tap on a specific event to view its details.
+Expected Result: The user is able to view the event details, including schedule, location, breakout sessions, keynote session information, speaker info, and sponsor details.
+Test Case 6: User - Add Event to My Schedule
+
+Log in as a user.
+Browse the list of events.
+Tap on a specific event and select the "Add to My Schedule" option.
+Expected Result: The event is successfully added to the "My Schedule" page, and a confirmation message is displayed.
+Test Case 7: Admin - Edit Event
+
+Log in as an admin.
+Navigate to the "Edit Event" section.
+Select an existing event, make changes to the event details, and tap the "Save Changes" button.
+Expected Result: The event details are successfully updated, and a confirmation message is displayed.
+Test Case 8: User - Receive Notification on Event Changes
+
+Log in as a user.
+Wait for an admin to make changes to an event that the user has added to their "My Schedule" page.
+Expected Result: The user receives a notification informing them about the changes made to the event.
+
+
+
+
