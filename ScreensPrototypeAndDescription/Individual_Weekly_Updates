@@ -509,3 +509,9 @@ Aakanksha Reddy Sunkireddy
 •Worked on the user interface of the app
 •Implemented the sounds for all the pages of the application
 •Trying to implement the sounds for the alert pop-ups
+
+Aishwarya Mallela
+•	Create keynote and breakout events as an Admin.
+•	Delete an event by admin.
+•	If the deleted event is added to my schedule page, the event should be removed from both the dashboard and my schedule screen for a user.
+•	Functionality testing in the user account.
