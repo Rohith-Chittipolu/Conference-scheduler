@@ -520,3 +520,13 @@ Satwika Reddy Guntipally
 •	Completed the documentation of the application.
 •	There are few changes that are to be made in the documentation.
 •	The format of the citations has to be changed.
+
+
+Abdul Khayyam sahib Shaik
+•	1) As an administrator, create keynote and breakout events.
+•	2) An admin deletes an event.
+•	3)The deleted event ought to be removed for a user from both the dashboard and my schedule screen if it is added to the page for my schedule.
+•	4)User account functionality testing.
+•	5) User notifications when an event is deleted from my schedule.
+•	6) Users who have events added to their schedules will receive push alerts when the admin updates or deletes the relevant event.
+
